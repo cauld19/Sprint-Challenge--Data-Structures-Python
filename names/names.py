@@ -24,22 +24,17 @@ duplicates = []  # Return the list of duplicates in this data structure
        # for name1 in names_1
        # for name2 in names_2 if name1 == name2]
 
-for name in names_1:
-       if name in names_2:
-            duplicates.append(name)
+# for name in names_1:
+#        if name in names_2:
+#             duplicates.append(name)
             
-# search = BSTNode(names_1[0])       
+search = BSTNode(names_1[0])
+for name in names_1[1:]:
+    search.insert(name)
 
-# for k,v in enumerate(names_1):
-#        search.insert(names_1[k])
-#        print(search.value)
-
-
-# for name in names_2:
-#        if search.contains(name):
-#               duplicates.append(name)
-       
-
+for name in names_2:
+    if search.contains(name):
+       duplicates.append(name)
        
 
 
